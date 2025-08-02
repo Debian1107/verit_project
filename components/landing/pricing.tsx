@@ -58,7 +58,7 @@ export function Pricing() {
                   className={`w-full h-12 text-base font-semibold ${
                     plan.featured
                       ? "bg-[#36ae58] text-white "
-                      : "bg-white text-verit-blue border-2 border-verit-blue hover:bg-blue-50"
+                      : "bg-white text-black border-2 border-black hover:bg-blue-50"
                   }`}
                 >
                   Get Started

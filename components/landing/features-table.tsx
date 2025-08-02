@@ -11,8 +11,8 @@ export function FeaturesTable() {
         <div className="overflow-x-auto bg-white rounded-xl shadow-lg border border-gray-200">
           <table className="w-full min-w-[700px] text-left">
             <thead>
-              <tr className="bg-verit-dark-header">
-                <th className="sticky left-0 bg-verit-dark-header p-6 text-base font-bold text-white z-10 border-r border-gray-600 w-1/4">
+              <tr className="bg--[#072530]">
+                <th className="sticky left-0 bg-[#072530] p-6 text-base font-bold text-white z-10 border-r border-gray-600 w-1/4">
                   Features
                 </th>
                 {pricingPlans.map((plan) => (
@@ -20,8 +20,8 @@ export function FeaturesTable() {
                     key={plan.name}
                     className={`p-6 text-base font-bold text-center border-r border-gray-600 last:border-r-0 w-1/4 ${
                       plan.featured
-                        ? "text-verit-blue-light bg-verit-dark-header"
-                        : "text-white bg-verit-dark-header"
+                        ? "text-white bg-[#072530]"
+                        : "text-white bg-[#072530]"
                     }`}
                   >
                     <div className="flex flex-col items-center gap-2">
@@ -101,9 +101,8 @@ export function FeaturesTable() {
 
         {/* Call-to-action buttons aligned with table columns */}
         <div className="mt-8 overflow-x-auto">
-          <div className="min-w-[700px] flex">
+          <div className="min-w-[700px] flex justify-center">
             {/* Empty space for Features column */}
-            <div className="w-1/4"></div>
             {/* Buttons aligned with plan columns */}
             {pricingPlans.map((plan) => (
               <div key={plan.name} className="w-1/4 px-4 text-center">
@@ -111,7 +110,7 @@ export function FeaturesTable() {
                   className={`w-full py-3 px-4 rounded-lg font-semibold transition-all duration-200 ${
                     plan.featured
                       ? "bg-[#36ae58] text-white  shadow-lg"
-                      : "bg-white text-verit-blue border-2 border-verit-blue hover:bg-blue-50"
+                      : "bg-white text-black border-2 border-black hover:bg-blue-50"
                   }`}
                 >
                   Choose {plan.name}

@@ -7,39 +7,48 @@ import { navLinks } from "@/lib/data";
 
 export function Header() {
   return (
-    <header className="sticky top-0 z-50 w-full bg-[#072530] backdrop-blur-sm">
-      <div className="container mx-auto flex h-16 items-center justify-between px-4 md:px-6">
+    <header className="w-full relative">
+      <div className="container mx-auto flex h-20 items-center justify-between px-4 md:px-6 rounded-2xl bg-[#072530]/60 backdrop-blur-lg shadow-md">
+        {/* Logo */}
         <Link href="#" className="flex items-center gap-2" prefetch={false}>
           <Image
             src="/verito-logo.png"
             alt="VeritSpace Logo"
-            width={32}
-            height={32}
+            width={36}
+            height={36}
             priority
           />
-          <span className="text-lg font-semibold text-white">VeritSpace</span>
+          <span className="text-xl font-semibold text-white">VeritSpace</span>
         </Link>
-        <nav className="hidden items-center gap-6 text-sm font-medium md:flex">
+
+        {/* Nav Links */}
+        <nav className="hidden md:flex items-center gap-16 px-6 py-2 bg-white/10 backdrop-blur-md rounded-full border-[1px] border-white/20 shadow-sm">
           {navLinks.map((link) => (
             <Link
               key={link.href}
               href={link.href}
-              className="text-gray-300 transition-colors hover:text-white"
+              className="text-lg font-light text-white hover:text-[#36ae58] transition-colors"
               prefetch={false}
             >
               {link.label}
             </Link>
           ))}
         </nav>
-        <div className="hidden items-center gap-4 md:flex">
+
+        {/* Buttons */}
+        <div className="hidden md:flex items-center gap-3 text-xl">
           <Button
-            variant="outline"
-            className="text-white border-gray-600 hover:bg-gray-700 hover:text-white bg-transparent"
+            variant={"outline"}
+            className="w-fit rounded-full border border-white/30 bg-white/10 backdrop-blur-md text-white"
           >
             Contact Sales
           </Button>
-          <Button className="bg-[#36ae58] text-white ">Get Started</Button>
+          <Button className="w-fit rounded-full bg-[#36ae58] text-white ">
+            Get Started
+          </Button>
         </div>
+
+        {/* Mobile Menu */}
         <Sheet>
           <SheetTrigger asChild>
             <Button
@@ -69,27 +78,24 @@ export function Header() {
                 />
                 <span className="text-lg font-semibold">VeritSpace</span>
               </Link>
-              <nav className="grid gap-2">
+              <nav className="grid gap-3">
                 {navLinks.map((link) => (
                   <Link
                     key={link.href}
                     href={link.href}
-                    className="rounded-md px-3 py-2 text-base font-medium transition-colors hover:bg-gray-700"
+                    className="rounded-md px-3 py-2 text-base  transition-colors "
                     prefetch={false}
                   >
                     {link.label}
                   </Link>
                 ))}
               </nav>
-              <div className="hidden items-center gap-4 md:flex">
-                <Button
-                  variant="outline"
-                  className="w-fit rounded-full border border-white/30 bg-white/10 backdrop-blur-md text-white "
-                >
-                  Contact Sales
+              <div className="grid gap-3 mt-4">
+                <Button className="bg-[#36ae58] text-white w-full rounded-full">
+                  Get Started
                 </Button>
-                <Button className="w-fit rounded-full bg-[#36ae58] text-white ">
-                  Get Started ddd
+                <Button className="w-full rounded-full border border-white/30 bg-white/10 backdrop-blur-md text-white">
+                  Contact Sales
                 </Button>
               </div>
             </div>

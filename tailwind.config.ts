@@ -1,4 +1,4 @@
-const { fontFamily } = require("tailwindcss/defaultTheme")
+const { fontFamily } = require("tailwindcss/defaultTheme");
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -24,7 +24,9 @@ module.exports = {
         "verit-dark-header": "#1e293b",
         "verit-blue": "#2563eb",
         "verit-blue-light": "#60a5fa",
-        "verit-green": "#10b981",
+        "verit-green": "#062631",
+        "verit-green-2": "#123a49",
+        "verit-green-light": "#36ae58",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
@@ -84,4 +86,4 @@ module.exports = {
     },
   },
   plugins: [require("tailwindcss-animate")],
-}
+};
