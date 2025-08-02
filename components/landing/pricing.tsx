@@ -19,9 +19,9 @@ export function Pricing() {
           {pricingPlans.map((plan) => (
             <Card
               key={plan.name}
-              className={`flex flex-col rounded-2xl shadow-lg transition-transform duration-300 hover:-translate-y-2 ${
+              className={`flex flex-col rounded-2xl shadow-lg transition-transform duration-300 hover:-translate-y-5 ${
                 plan.featured
-                  ? "border-2 border-verit-blue md:scale-105"
+                  ? "border-2 border-verit-green-light md:scale-105"
                   : "border"
               }`}
             >
