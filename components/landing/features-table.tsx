@@ -111,17 +111,17 @@ export function FeaturesTable() {
                 ))}
               </tr>
             </thead>
-            <tbody>
+            <tbody className="">
               {featuresData.map((feature, index) => (
                 <tr
                   key={feature.name}
                   className={`border-b border-gray-100 hover:bg-gradient-to-r hover:from-verit-green-light/5 hover:to-transparent transition-all duration-300 group ${
-                    index % 2 === 0 ? "bg-white" : "bg-gray-50/30"
+                    index % 2 === 0 ? "bg-white" : "bg-white"
                   }`}
                 >
                   <td
                     className={`sticky left-0 p-6 font-semibold text-gray-900 z-10 border-r border-gray-200 group-hover:border-verit-green-light/20 transition-colors duration-300 ${
-                      index % 2 === 0 ? "bg-white" : "bg-gray-50/30"
+                      index % 2 === 0 ? "bg-white" : "bg-white md:bg-gray-50/30"
                     }`}
                   >
                     <div className="flex items-center">
@@ -198,13 +198,13 @@ export function FeaturesTable() {
         </div>
 
         {/* Enhanced CTA buttons section */}
-        <div className="mt-12 overflow-x-auto">
-          <div className=" flex items-center align-middle justify-center">
+        <div className="mt-12 overflow-x-auto scroll-smooth">
+          <div className=" flex flex-col md:flex-row">
             {/* Empty space for Features column */}
 
             {/* Enhanced buttons aligned with plan columns */}
             {pricingPlans.map((plan, index) => (
-              <div key={plan.name} className="w-1/4 px-4 text-center">
+              <div key={plan.name} className="w-full px-4 text-center">
                 <button
                   className={`group w-full py-4 px-6 rounded-2xl font-bold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-2xl ${
                     plan.featured
@@ -212,7 +212,7 @@ export function FeaturesTable() {
                       : "bg-white text-gray-900 border-2 border-gray-200 hover:border-verit-green-light hover:bg-verit-green-light/5"
                   }`}
                 >
-                  <div className="flex items-center justify-center">
+                  <div className=" flex items-center justify-center overflow">
                     {plan.featured && <Star className="h-4 w-4 mr-2" />}
                     <span>Choose {plan.name}</span>
                     <ArrowRight className="h-4 w-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
